@@ -26,11 +26,21 @@ showButtons.forEach(function(button) {
     } 
     // If this is the second click, show the div
     else if (clickCounts[target] === 2 && myDiv.style.display !== "block") {
+      
+      var maxZIndex = 0;
+      $(".window").each(function() {
+        var zIndex = parseInt($(this).css("z-index"));
+        if (zIndex > maxZIndex) {
+          maxZIndex = zIndex;
+        }
+      });
+
       button.classList.remove("selected");
       myDiv.style.display = "block";
       myDiv.style.position = "absolute";
       myDiv.style.top = "10%";
       myDiv.style.left = "50%";
+      myDiv.style.zIndex = maxZIndex + 1;
       // Reset click count after showing the div
       clickCounts[target] = 0;
     }
@@ -43,6 +53,7 @@ hideButtons.forEach(function(button) {
     var target = button.dataset.target;
     var myDiv = document.getElementById(target);
     myDiv.style.display = "none";
+    myDiv.style.zIndex = 1;
   });
 });
 
@@ -57,3 +68,4 @@ document.addEventListener("click", function(event) {
     }
   });
 });
+

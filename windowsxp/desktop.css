@@ -13,12 +13,18 @@ html, body {
   overflow: hidden;
 }
 
+.window {
+  position: absolute;
+  /* Add a default z-index value for windows */
+  z-index: 1;
+}
+
 button:hover {
   cursor: pointer;
 }
 
 footer {
-  z-index: 999;
+  z-index: 10;
 }
 
 footer#taskbar {
@@ -52,11 +58,12 @@ span.start-btn:active{
 }
 
 .start-menu-win {
-  z-index: 999;
+  z-index: 11;
   position: fixed;
   bottom: 27px;
   left: 0;
   opacity: 0;
+  pointer-events: none;
 }
 
 .start-menu-win.active-menu {
@@ -64,7 +71,7 @@ span.start-btn:active{
 }
 
 #clock {
-  z-index: 1001;
+  z-index: 12;
   position: fixed;
   bottom: 0;
   right: 0;
@@ -74,7 +81,7 @@ span.start-btn:active{
 }
 
 .fixed-bottom-right {
-  z-index: 1000;
+  z-index: 11;
   position: fixed;
   bottom: 0;
   right: 0;
@@ -128,3 +135,25 @@ span.start-btn:active{
   filter: drop-shadow(0 0 0 transparent)
 }
 
+a {
+  font-family: "Pixelated MS Sans Serif",Arial;
+}
+
+a:hover {
+  cursor: pointer;
+  color: red !important;
+}
+
+.entries {
+  position: absolute;
+  width: 60%;
+  max-height: 350px;
+  right: 0;
+  padding-right: 15px;
+  overflow-y: scroll;
+}
+
+.entries *{
+  margin: 5px;
+  font-family: "Pixelated MS Sans Serif",Arial;
+}
