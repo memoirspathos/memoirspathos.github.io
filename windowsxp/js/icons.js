@@ -29,7 +29,7 @@ showButtons.forEach(function(button) {
       button.classList.remove("selected");
       myDiv.style.display = "block";
       myDiv.style.position = "absolute";
-      myDiv.style.top = "50%";
+      myDiv.style.top = "10%";
       myDiv.style.left = "50%";
       // Reset click count after showing the div
       clickCounts[target] = 0;
