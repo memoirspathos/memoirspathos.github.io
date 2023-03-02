@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Windows XP Error Message</title>
+  <link rel="stylesheet" href="https://unpkg.com/xp.css">   
+  <link rel="stylesheet" type="text/css" href="windowsxp/desktop.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+</head>
+<body>
+
+<div id="clock"></div>
+<img class="fixed-bottom-right"src="windowsxp/clock.png">
+<script src="windowsxp/js/clock.js"></script>
+
+<div class="button-grid icon-grid">
+  <div class="icon" data-target="contact">
+    <ul>
+        <img src="windowsxp/icons/network.png">
+        <span>Contact</span>
+    </ul>
+  </div>
+  <div class="icon" data-target="test2">
+    <ul>
+        <img src="windowsxp/icons/folder-full.png">
+        <span>test2</span>
+    </ul>
+  </div>
+ </div>
+
+
+<div class="window" id="contact" style="display:none; width: 300px">
+    <div class="title-bar">
+      <div class="title-bar-text">test winow</div>
+      <div class="title-bar-controls">
+        <button class="close" data-target="contact" aria-label="Close"></button>
+      </div>
+    </div>
+    <div class="window-body">
+      <p>There's so much room for activities!</p>
+    </div>
+  </div>
+
+  <div class="window" id="test2" style="display:none; width: 300px">
+    <div class="title-bar">
+      <div class="title-bar-text">test winow</div>
+      <div class="title-bar-controls">
+        <button class="close" data-target="test2" aria-label="Close"></button>
+      </div>
+    </div>
+    <div class="window-body">
+      <p>There's so much room for activities!</p>
+    </div>
+  </div>
+
+  <script src="windowsxp/js/icons.js"></script>
+
+
+
+<footer id="taskbar">
+    <span class="start-btn">
+      <img src="windowsxp/start-btn.png" alt="">
+    </span>
+    <img src="windowsxp/win-bottom.png" alt="">
+ </footer>
+  <div class="start-menu-win">
+    <img src="windowsxp/start-menu.png" alt="">
+  </div>
+  <script src="windowsxp/js/start-menu.js"></script>
+</body>
+</html>

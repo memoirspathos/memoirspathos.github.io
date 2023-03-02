@@ -1,0 +1,125 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+html, body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background: url("../art assets - trinh hami/metamorphosis/img20230216_02152255.jpg") no-repeat center/cover;
+  overflow: hidden;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+footer#taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+footer#taskbar img {
+  height: 30px;
+  display: block;
+  margin: 0;
+}
+
+span.start-btn {
+  position: absolute;
+  left: 0;
+  height: 30px;
+  max-width: calc(100% - 95vw);
+  cursor: pointer;
+  transition: filter 0.1s ease;
+}
+
+span.start-btn:hover{
+  filter: brightness(1.25);
+}
+
+span.start-btn:active{
+  filter: brightness(0.9);
+}
+
+.start-menu-win {
+  position: fixed;
+  bottom: 27px;
+  left: 0;
+  opacity: 0;
+}
+
+.start-menu-win.active-menu {
+  opacity: 1;
+}
+
+#clock {
+  z-index: 2;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  font-size: 14px;
+  padding: 0 14px 6px;
+  color: white;
+}
+
+.fixed-bottom-right {
+  z-index: 1;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.icon-grid {
+  padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(1, 50px); /* change the width to 50px for square buttons */
+  grid-gap: 50px;
+  position: fixed; /* stick the grid to the right side of the screen */
+  top: 0;
+  left: 0;
+}
+
+.icon-grid div.icon {
+  width: 50px; /* make the icons square */
+  height: 70px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  color: #000;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.icon-grid div.icon img {
+  width: 50px;
+  height: 50px;
+}
+
+.icon-grid div.icon span {
+  color: white;
+  filter: drop-shadow(0 0 0.10rem black);
+}
+
+.icon-grid div.icon:hover {
+  cursor: pointer;
+}
+
+.icon-grid div.icon.selected img {
+  opacity: 0.75;
+}
+
+.icon-grid div.icon.selected span {
+  padding: 0 4px;
+  background-color: blue;
+  filter: drop-shadow(0 0 0 transparent)
+}
+
