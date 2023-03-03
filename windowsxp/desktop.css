@@ -75,12 +75,17 @@ span.start-btn:active{
 }
 
 #art {
+  width: 210px;
+  height: 600px;
   top: 30%; 
   left: 45%; 
 }
 
 #media {
-  top: 35%; left: 60%; 
+  width: 210px;
+  height: 440px;
+  top: 35%; 
+  left: 60%; 
 }
 
 .start-menu-win {
