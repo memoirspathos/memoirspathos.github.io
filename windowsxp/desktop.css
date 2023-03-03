@@ -260,3 +260,18 @@ a:hover {
 .slider .dots .dot.active {
   background: #da4167 ;
 }
+
+@media screen and (max-width: 1300px) {
+    .icon {
+      width: 200px;
+      height: 280px;
+      font-size: 24;
+    }
+
+    .icon img {
+      width: 200px;
+      height: 200px;
+    }
+
+
+}
