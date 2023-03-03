@@ -11,7 +11,18 @@ html, body {
   width: 100%;
   background: url("../art assets - trinh hami/metamorphosis/1.jpg") no-repeat center/cover;
   overflow: hidden;
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+
 }
+
+ /* Hide scrollbar for Chrome, Safari and Opera */
+ body::-webkit-scrollbar {
+  display: none;
+}
+
+
 
 footer#taskbar {
   position: fixed;
@@ -122,7 +133,6 @@ span.start-btn:active{
   left: 0;
 }
 
-
 .icon {
   width: 50px; /* make the icons square */
   height: 70px;
@@ -182,6 +192,30 @@ a:hover {
   cursor: pointer;
   color: #ff0080 !important;
 }
+
+#archive {
+  background-color: white; 
+  width: 600px; 
+  height: 400px
+}
+
+#music {
+  background-color: black; 
+  width: 410px; 
+}
+
+#art {
+  background-color: white; 
+  width: 170px; 
+  height: 380px;
+}
+
+#medira {
+  background-color: white; 
+  width: 170px; 
+  height: 290px;
+}
+
 
 .entries {
   position: absolute;
