@@ -75,15 +75,15 @@ span.start-btn:active{
 }
 
 #art {
-  width: 210px;
+  width: 170px;
   height: 600px;
   top: 30%; 
   left: 45%; 
 }
 
 #media {
-  width: 210px;
-  height: 440px;
+  width: 170px;
+  height: 280px;
   top: 35%; 
   left: 60%; 
 }
@@ -272,7 +272,7 @@ a:hover {
 .slider .arrow {
   font-size: 50px;
   font-weight: bold;
-  color: #ff0080;
+  color: #00a2ed;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -283,7 +283,11 @@ a:hover {
 }
 
 .slider .arrow:hover {
-  color: #da4167;
+  filter: brightness(1.25);
+}
+
+.slider .arrow:active {
+  filter: brightness(0.9);
 }
 
 .slider .arrow.left {
@@ -307,12 +311,12 @@ a:hover {
   height: 10px;
   margin: 0 5px;
   border-radius: 50%;
-  background: #f78764;
+  background: #00a2ed;
   cursor: pointer;
 }
 
 .slider .dots .dot.active {
-  background: #da4167 ;
+  filter: brightness(1.25);
 }
 
 @media screen and (max-width: 1300px) {
@@ -346,7 +350,8 @@ a:hover {
     }
     
     #media {
-      top: 15%; left: 25%; 
+      top: 15%; 
+      left: 25%; 
       width: 210px; 
       height: 440px;
     }

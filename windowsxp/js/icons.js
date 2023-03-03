@@ -52,7 +52,7 @@ linkElements.forEach(function(link) {
     myDiv.style.display = "block";
     myDiv.style.position = "absolute";
     myDiv.style.top = "10%";
-    myDiv.style.left = "50%";
+    myDiv.style.left = "30%";
     myDiv.style.zIndex = getMaxZIndex() + 1;
   });
 });
