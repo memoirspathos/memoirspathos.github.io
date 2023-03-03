@@ -4,25 +4,56 @@ var myDivs = document.querySelectorAll(".window");
 
 var clickCounts = {};
 
+var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+if (isMobile) {
+  // Add touchstart event listeners to the "Show" buttons
+  showButtons.forEach(function(button) {
+    button.addEventListener("touchstart", function(event) {
+      event.preventDefault(); // prevent the default touchstart behavior (e.g. scrolling)
+
+      var target = button.dataset.target;
+      var myDiv = document.getElementById(target);
+
+      // Show the div if it's not already visible
+      if (myDiv.style.display !== "block") {
+        button.classList.add("selected");
+        myDiv.style.display = "block";
+        myDiv.style.position = "absolute";
+        myDiv.style.top = "10%";
+        myDiv.style.left = "50%";
+        myDiv.style.zIndex = getMaxZIndex() + 1;
+      }
+    });
+  });
+}
+
+// Helper function to get the highest z-index of all visible "window" elements
+function getMaxZIndex() {
+  var maxZIndex = 0;
+  myDivs.forEach(function(div) {
+    if (div.style.display === "block") {
+      var zIndex = parseInt(div.style.zIndex);
+      if (zIndex > maxZIndex) {
+        maxZIndex = zIndex;
+      }
+    }
+  });
+  return maxZIndex;
+}
+
+
 var linkElements = document.querySelectorAll(".link");
 linkElements.forEach(function(link) {
   link.addEventListener("click", function() {
     var target = link.dataset.target;
     var myDiv = document.getElementById(target);
-    
-    var maxZIndex = 0;
-    $(".window").each(function() {
-      var zIndex = parseInt($(this).css("z-index"));
-      if (zIndex > maxZIndex) {
-        maxZIndex = zIndex;
-      }
-    });
 
     myDiv.style.display = "block";
     myDiv.style.position = "absolute";
     myDiv.style.top = "10%";
     myDiv.style.left = "50%";
-    myDiv.style.zIndex = maxZIndex + 1;
+    myDiv.style.zIndex = getMaxZIndex() + 1;
   });
 });
 
@@ -48,21 +79,13 @@ showButtons.forEach(function(button) {
     } 
     // If this is the second click, show the div
     else if (clickCounts[target] === 2 && myDiv.style.display !== "block") {
-      
-      var maxZIndex = 0;
-      $(".window").each(function() {
-        var zIndex = parseInt($(this).css("z-index"));
-        if (zIndex > maxZIndex) {
-          maxZIndex = zIndex;
-        }
-      });
 
       button.classList.remove("selected");
       myDiv.style.display = "block";
       myDiv.style.position = "absolute";
       myDiv.style.top = "10%";
       myDiv.style.left = "50%";
-      myDiv.style.zIndex = maxZIndex + 1;
+      myDiv.style.zIndex = getMaxZIndex() + 1;
       // Reset click count after showing the div
       clickCounts[target] = 0;
     }

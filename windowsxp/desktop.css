@@ -13,12 +13,6 @@ html, body {
   overflow: hidden;
 }
 
-.window {
-  position: absolute;
-  /* Add a default z-index value for windows */
-  z-index: 1;
-}
-
 button:hover {
   cursor: pointer;
 }
@@ -55,6 +49,35 @@ span.start-btn:hover{
 
 span.start-btn:active{
   filter: brightness(0.9);
+}
+
+.window {
+  position: absolute;
+  /* Add a default z-index value for windows */
+  z-index: 1;
+}
+
+.on-start {
+  display:block;
+}
+
+#archive {
+  top: 5%; 
+  left: 10%; 
+}
+
+#music {
+  top: 7%; 
+  left: 67.5%; 
+}
+
+#art {
+  top: 30%; 
+  left: 45%; 
+}
+
+#media {
+  top: 35%; left: 60%; 
 }
 
 .start-menu-win {
