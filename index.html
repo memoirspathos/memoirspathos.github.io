@@ -5,6 +5,7 @@
   <title>metamorphosis</title>
   <link rel="stylesheet" href="https://unpkg.com/xp.css">   
   <link rel="stylesheet" type="text/css" href="windowsxp/desktop.css">
+  <script src="windowsxp\js\slideshow.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
 </head>
@@ -13,10 +14,10 @@
 <script src="acknowledgements.js"></script>
 
 <div id="clock"></div>
-<img class="fixed-bottom-right"src="windowsxp/clock.png">
+<img class="fixed-bottom-right" src="windowsxp/clock.png">
 <script src="windowsxp/js/clock.js"></script>
 
-<div class="button-grid icon-grid">
+<div class="grid" id="icon-box">
   <div class="icon" data-target="contact">
     <ul>
         <img src="windowsxp/icons/contact.png ">
@@ -31,7 +32,7 @@
   </div>
   <div class="icon" data-target="art">
     <ul>
-        <img src="windowsxp/icons/paint.png">
+        <img src="windowsxp/icons/folder.png">
         <span>art</span>
     </ul>
   </div>
@@ -43,7 +44,7 @@
   </div>
   <div class="icon" data-target="media">
     <ul>
-        <img src="windowsxp/icons/wmp.png">
+        <img src="windowsxp/icons/folder.png">
         <span>media</span>
     </ul>
   </div>
@@ -54,7 +55,6 @@
     </ul>
   </div>
 </div>
-
 
 <div class="window" id="contact" style="display:none; width: 410px; height: 520px;">
     <div class="title-bar">
@@ -109,7 +109,7 @@
       </div>
 </div>
 
-<div class="window" id="archive" style="display: block; top: 10%; left: 10%; background-color: white; width: 600px; height: 400px">
+<div class="window" id="archive" style="display: block; top: 5%; left: 10%; background-color: white; width: 600px; height: 400px">
     <div class="title-bar">
       <div class="title-bar-text">archive</div>
       <div class="title-bar-controls">
@@ -120,7 +120,7 @@
       <aside style="float: left">
         <ul class="tree-view" style="height: 340px">
             <summary>
-              <label>hami trinh</label>
+              <label>✨hami trinh✨</label>
             </summary>
             <ul>
               <li>
@@ -189,7 +189,7 @@
       </aside>
       <div class="entries">
         <div id="metamorphosis">
-          <u>metamorphosis</u> (select spreads/24 pages) <br> <br>
+          <u class="link" data-target="scanned-metamorphosis">metamorphosis</u> (select spreads/24 pages) <br> <br>
             metamorphosis is a 24-page zine riso printed in blue, fluorescent pink, <br>
             yellow, and flat gold; pages are hydraulic cut and covers are laser cut; <br>
             photos taken and edited by hami; writing by hami <br>
@@ -239,7 +239,7 @@
           <i>dec 01 2021</i> <br>
         </div>
         <div id="nonlinearthoughts" style = "margin-top: 60px;">
-          <u>diary of nonlinear thoughts </u> (32 pages) <br> <br>
+          <u class="link" data-target="scanned-diary">diary of nonlinear thoughts </u> (32 pages) <br> <br>
           if there are nights you ever feel too lonely, or overwhelmed, or anything that’s <br>
           too much for you to just exist, you can call me any night at 10pm and i promise <br>
           i will pick up every time. <br>
@@ -247,8 +247,8 @@
         <div id="mar-04-2022">
           <i>mar 04 2022</i> <br>
         </div>
-        <div id="cooldown" style = "margin-top: 60px;">
-          <u>comedown</u> (20 pages) <br> <br>
+        <div id="comedown" style = "margin-top: 60px;">
+          <u class="link" data-target="scanned-comedown">comedown</u> (20 pages) <br> <br>
           i keep talking to myself as if you’re there <br>
         </div>
         <div id="jan-06-2022">
@@ -258,7 +258,7 @@
     </div>
 </div>
 
-<div class="window" id="art" style="display:none; width: 410px; height: 520px;">
+<div class="window" id="art" style="display:block; top: 30%; left: 50%; background-color: white; width: 180px; height: 380px;">
   <div class="title-bar">
     <div class="title-bar-text">art</div>
     <div class="title-bar-controls">
@@ -266,16 +266,190 @@
     </div>
   </div>
   <div class="window-body">
-
+    <div class="grid" id="art-box">
+      <div class="icon" data-target="scanned-metamorphosis">
+        <ul>
+            <img src="windowsxp/icons/folder.png ">
+            <span>metamorphosis</span>
+        </ul>
+      </div>
+      <div class="icon" data-target="scanned-diary">
+        <ul>
+            <img src="windowsxp/icons/folder.png ">
+            <span>diary of non linear thoughts</span>
+        </ul>
+      </div>
+      <div class="icon" data-target="scanned-comedown">
+        <ul>
+            <img src="windowsxp/icons/folder.png ">
+            <span>comedown</span>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
 
-<div class="window" id="music" style="display:none; width: 410px; height: 520px;">
+<div class="window" id="scanned-metamorphosis" style="display:none; width: 600px;">
+  <div class="title-bar">
+    <div class="title-bar-text">metamorphosis</div>
+    <div class="title-bar-controls">
+      <button class="close" data-target="scanned-metamorphosis" aria-label="Close"></button>
+    </div>
+  </div>
+  <div class="window-body">
+    <div id="slider-metamorphosis" class="slider">
+      <img class="proj active" src="art assets - trinh hami\metamorphosis\0. cover.jpg">
+      <img class="proj" src="art assets - trinh hami\metamorphosis\1.jpg">
+      <img class="proj" src="art assets - trinh hami\metamorphosis\2.jpg">
+      <img class="proj" src="art assets - trinh hami\metamorphosis\3.jpg">
+      <img class="proj" src="art assets - trinh hami\metamorphosis\4.jpg">
+      <img class="proj" src="art assets - trinh hami\metamorphosis\5.jpg">
+      <img class="proj" src="art assets - trinh hami\metamorphosis\6.jpg">
+      <img class="proj" src="art assets - trinh hami\metamorphosis\7.jpg">
+
+      <div class="arrow left">&lt;</div>
+      <div class="arrow right">&gt;</div>
+      
+      <div class="dots">
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <script>
+        const sliderMetamorphosis = document.querySelector('#slider-metamorphosis');
+        initSlider(sliderMetamorphosis);
+    </script>
+  </div>
+  <div class="status-bar" style="margin-top: 20px;">
+    <p class="status-bar-field">metamorphosis</p>
+    <p class="status-bar-field">feb 17 2023</p>
+  </div>
+  </div>
+</div>
+
+<div class="window" id="scanned-diary" style="display:none; width: 600px;">
+  <div class="title-bar">
+    <div class="title-bar-text">diary of nonlinear thoughts</div>
+    <div class="title-bar-controls">
+      <button class="close" data-target="scanned-diary" aria-label="Close"></button>
+    </div>
+  </div>
+  <div class="window-body">
+    <div id="slider-diary" class="slider">
+      <img class="proj active" src="art assets - trinh hami\nonlinear diary\cover.jpg">
+      <img class="proj" src="art assets - trinh hami\nonlinear diary\1-2.jpg">
+      <img class="proj" src="art assets - trinh hami\nonlinear diary\3-4.jpg">
+      <img class="proj" src="art assets - trinh hami\nonlinear diary\5-6.jpg">
+      <img class="proj" src="art assets - trinh hami\nonlinear diary\7-8.jpg">
+      <img class="proj" src="art assets - trinh hami\nonlinear diary\9-10.jpg">
+      <img class="proj" src="art assets - trinh hami\nonlinear diary\11-12.jpg">
+      <img class="proj" src="art assets - trinh hami\nonlinear diary\13-14.jpg">
+      <img class="proj" src="art assets - trinh hami\nonlinear diary\15-16.jpg">
+      <img class="proj" src="art assets - trinh hami\nonlinear diary\17-18.jpg">
+      <img class="proj" src="art assets - trinh hami\nonlinear diary\19-20.jpg">
+      <img class="proj" src="art assets - trinh hami\nonlinear diary\21-22.jpg">
+      <img class="proj" src="art assets - trinh hami\nonlinear diary\23-24.jpg">
+      <img class="proj" src="art assets - trinh hami\nonlinear diary\25-26.jpg">
+      <img class="proj" src="art assets - trinh hami\nonlinear diary\27-28.jpg">
+      <img class="proj" src="art assets - trinh hami\nonlinear diary\29-30.jpg">
+      <img class="proj" src="art assets - trinh hami\nonlinear diary\back.jpg">
+      <div class="arrow left">&lt;</div>
+      <div class="arrow right">&gt;</div>
+      
+      <div class="dots">
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <script>
+        const sliderDiary = document.querySelector('#slider-diary');
+        initSlider(sliderDiary);
+    </script>
+  </div>
+  <div class="status-bar" style="margin-top: 20px;">
+    <p class="status-bar-field">diary of nonlinear thoughts</p>
+    <p class="status-bar-field">mar 04 2022</p>
+  </div>
+  </div>
+</div>
+
+<div class="window" id="scanned-comedown" style="display:none; width: 600px;">
+  <div class="title-bar">
+    <div class="title-bar-text">comedown</div>
+    <div class="title-bar-controls">
+      <button class="close" data-target="scanned-comedown" aria-label="Close"></button>
+    </div>
+  </div>
+  <div class="window-body">
+    <div id="slider-comedown" class="slider">
+      <img class="proj active" src="art assets - trinh hami\comedown\cover.jpg">
+      <img class="proj" src="art assets - trinh hami\comedown\1-2.jpg">
+      <img class="proj" src="art assets - trinh hami\comedown\3-4.jpg">
+      <img class="proj" src="art assets - trinh hami\comedown\5-6.jpg">
+      <img class="proj" src="art assets - trinh hami\comedown\7-8.jpg">
+      <img class="proj" src="art assets - trinh hami\comedown\9-10.jpg">
+      <img class="proj" src="art assets - trinh hami\comedown\11-12.jpg">
+      <img class="proj" src="art assets - trinh hami\comedown\13-14.jpg">
+      <img class="proj" src="art assets - trinh hami\comedown\15-16.jpg">
+      <img class="proj" src="art assets - trinh hami\comedown\17-18.jpg">
+      <img class="proj" src="art assets - trinh hami\comedown\back.jpg">
+
+
+      <div class="arrow left">&lt;</div>
+      <div class="arrow right">&gt;</div>
+      
+      <div class="dots">
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <script>
+        const sliderComedown = document.querySelector('#slider-comedown');
+        initSlider(sliderComedown);
+    </script>
+  </div>
+  <div class="status-bar" style="margin-top: 20px;">
+    <p class="status-bar-field">diary of nonlinear thoughts</p>
+    <p class="status-bar-field">jan 06 2022</p>
+  </div>
+  </div>
+</div>
+
+<div class="window" id="music" style="display:block; top: 7%; left: 67.5%; background-color: white; width: 410px; height: 520px; ">
   <div class="title-bar">
     <div class="title-bar-text">music</div>
     <div class="title-bar-controls">
       <button class="close" data-target="music" aria-label="Close"></button>
     </div>
+  </div>
+  <div class="window-body">
   </div>
 </div>
 
@@ -299,10 +473,10 @@
     </div>
   </div>
   <div class="window-body">
-    <pre style="height: 470px;">Microsoft&#10094;R&#10095; Windows DOS 
-      &#10094;C&#10095; Copyright Microsoft Corp 1990-2001.
-            <br>C:&#92;Users&#92;hami>execute sequence &straightphi; <br>
+    <pre style="height: 560px;">Site Created by Phi Bui <br>Special Thanks to: Brady Norum
+            <br>C:&#92;Users&#92;hami>execute objective &straightphi; <br>
             <progress></progress>
+            <img src="ascii-gundam.gif" style="height: 80%; transform: translate(-3rem);">
           </pre>
   </div>
 </div>

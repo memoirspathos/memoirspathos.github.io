@@ -87,17 +87,28 @@ span.start-btn:active{
   right: 0;
 }
 
-.icon-grid {
+#icon-box {
+  position: fixed; /* stick the grid to the right side of the screen */
+  filter: drop-shadow(0 0 0.10rem black);
+}
+
+#art-box{
+  margin-top: 10px;
+  margin-left: 20px;
+  position: absolute;
+}
+
+.grid {
   padding: 40px;
   display: grid;
-  grid-template-columns: repeat(1, 50px);
   grid-gap: 40px;
-  position: fixed; /* stick the grid to the right side of the screen */
+  grid-template-columns: repeat(1, 50px);
   top: 0;
   left: 0;
 }
 
-.icon-grid div.icon {
+
+.icon {
   width: 50px; /* make the icons square */
   height: 70px;
   padding: 0;
@@ -109,27 +120,34 @@ span.start-btn:active{
   justify-content: center;
   align-items: center;
   text-align: center;
-  filter: drop-shadow(0 0 0.10rem black);
 }
 
-.icon-grid div.icon img {
+.icon img {
   width: 50px;
   height: 50px;
 }
 
-.icon-grid div.icon span {
+#icon-box span {
   color: white;
 }
 
-.icon-grid div.icon:hover {
+#art-box span {
+  color: black;
+}
+
+#art-box img {
+  filter: drop-shadow(0 0 0.10rem black);
+}
+
+.icon:hover {
   cursor: pointer;
 }
 
-.icon-grid div.icon.selected img {
+.icon.selected img {
   opacity: 0.75;
 }
 
-.icon-grid div.icon.selected span {
+.icon.selected span {
   padding: 0 4px;
   background-color: blue;
   filter: drop-shadow(0 0 0 transparent)
@@ -141,7 +159,12 @@ a {
 
 a:hover {
   cursor: pointer;
-  color: red !important;
+  color: #ff0080 !important;
+}
+
+.link:hover {
+  cursor: pointer;
+  color: #ff0080 !important;
 }
 
 .entries {
@@ -156,4 +179,83 @@ a:hover {
 .entries *{
   margin: 5px;
   font-family: "Pixelated MS Sans Serif",Arial;
+}
+
+.slider {  
+  border: black;
+  border-style: inset;
+  border-width: 10px;
+  max-width: 100%;
+  height: 400px; /* Set a fixed height for the slider */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center images vertically */
+}
+
+.proj {
+  max-width: 80%;
+  max-height: 100%; /* Ensure images don't exceed slider height */
+  object-fit: contain;
+}
+
+.slider .proj {
+  display: none;
+  cursor: zoom-in;
+  transition: transform 0.2s ease-out;
+}
+
+.slider .proj.active {
+  display: block;
+}
+
+.slider .proj.active.zoomed {
+  transform: scale(1.5);
+  cursor: zoom-out;
+}
+
+.slider .arrow {
+  font-size: 50px;
+  font-weight: bold;
+  color: #ff0080;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  cursor: pointer;
+  user-select: none; 
+  
+}
+
+.slider .arrow:hover {
+  color: #da4167;
+}
+
+.slider .arrow.left {
+  left: 20px;
+}
+
+.slider .arrow.right {
+  right: 20px;
+}
+
+.slider .dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.slider .dots .dot {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background: #f78764;
+  cursor: pointer;
+}
+
+.slider .dots .dot.active {
+  background: #da4167 ;
 }

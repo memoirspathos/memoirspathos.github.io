@@ -4,6 +4,28 @@ var myDivs = document.querySelectorAll(".window");
 
 var clickCounts = {};
 
+var linkElements = document.querySelectorAll(".link");
+linkElements.forEach(function(link) {
+  link.addEventListener("click", function() {
+    var target = link.dataset.target;
+    var myDiv = document.getElementById(target);
+    
+    var maxZIndex = 0;
+    $(".window").each(function() {
+      var zIndex = parseInt($(this).css("z-index"));
+      if (zIndex > maxZIndex) {
+        maxZIndex = zIndex;
+      }
+    });
+
+    myDiv.style.display = "block";
+    myDiv.style.position = "absolute";
+    myDiv.style.top = "10%";
+    myDiv.style.left = "50%";
+    myDiv.style.zIndex = maxZIndex + 1;
+  });
+});
+
 // Add click event listeners to the "Show" buttons
 showButtons.forEach(function(button) {
   button.addEventListener("click", function() {
