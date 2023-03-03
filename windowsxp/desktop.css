@@ -324,7 +324,7 @@ a:hover {
     }
 
     #archive {
-      top: 35%; 
+      top: 65%; 
       left: 20%; 
     }
     
@@ -341,7 +341,7 @@ a:hover {
     }
     
     #media {
-      top: 15%; left: 20%; 
+      top: 15%; left: 25%; 
       width: 210px; 
       height: 460px;
     }
