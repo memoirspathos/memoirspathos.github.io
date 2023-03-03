@@ -88,10 +88,10 @@ span.start-btn:active{
 }
 
 .icon-grid {
-  padding: 50px;
+  padding: 40px;
   display: grid;
-  grid-template-columns: repeat(1, 50px); /* change the width to 50px for square buttons */
-  grid-gap: 50px;
+  grid-template-columns: repeat(1, 50px);
+  grid-gap: 40px;
   position: fixed; /* stick the grid to the right side of the screen */
   top: 0;
   left: 0;
