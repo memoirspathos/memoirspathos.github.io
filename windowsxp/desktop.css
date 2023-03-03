@@ -10,7 +10,6 @@ html, body {
   height: 100vh;
   width: 100%;
   background: url("../art assets - trinh hami/metamorphosis/1.jpg") no-repeat center/cover;
-  background-position: center;
   overflow: hidden;
 }
 
@@ -282,6 +281,7 @@ a:hover {
       width: 100px;
       height: 140px;
       font-size: 24;
+      font-weight: bolder;
     }
 
     .icon img {
@@ -290,21 +290,25 @@ a:hover {
     }
 
     #archive {
-      top: 15%; 
+      top: 25%; 
       left: 20%; 
     }
     
     #music {
       top: 7%; 
-      left: 60%; 
+      left: 40%; 
     }
     
     #art {
       top: 30%; 
-      left: 45%; 
+      left: 65%; 
+      width: 200px; 
+      height: 600px;
     }
     
     #media {
-      top: 35%; left: 40%; 
+      top: 15%; left: 20%; 
+      width: 200px; 
+      height: 4600px;
     }
 }
