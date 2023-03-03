@@ -204,12 +204,12 @@
           <i>nov 12 2022</i> <br>
           sometimes i feel like a rotten cigarette <br>
         </div>
-        <div class="link" data-target="scanned-metamorphosis" id="feb-17-2023">
-          <i>feb 17 2023</i> <br>
+        <div id="feb-17-2023">
+          <i class="link" data-target="scanned-metamorphosis">feb 17 2023</i> <br>
           it gets better <br>
         </div>
         <div id="videodiary" style = "margin-top: 60px;">
-          <u>a video diary</u> (11:02) <br> <br>
+          <u class="link" data-target="video-diary">a video diary</u> (11:02) <br> <br>
         </div>
         <div id="mar-16-2022">
           <i>mar 16 2022</i> <br>
@@ -224,14 +224,14 @@
           ever loved me * time capsules are so sad * i love you * and i will i miss you every day <br>
         </div>
         <div id="apr-21-2022">
-          <i>apr 21 2022</i> <br>
+          <i class="link" data-target="video-diary">apr 21 2022</i> <br>
         </div>
         <div id="nov-30-2022">
           <i>nov 30 2022</i> <br>
           i did not pass biology <br>
         </div>
         <div id="warmlove" style = "margin-top: 60px;">
-          <u>i've got my love to keep me warm</u> (8:42) <br> <br>
+          <u class="link" data-target="warm-love">i've got my love to keep me warm</u> (8:42) <br> <br>
           a documentation of my first few months living in boston, featuring new <br>
           friends on camera and old friends’ voices recorded on a sony icd-b600 <br>
           special thanks to luis arnías and friends <br>
@@ -246,7 +246,7 @@
           i will pick up every time. <br>
         </div>
         <div id="mar-04-2022">
-          <i>mar 04 2022</i> <br>
+          <i class="link" data-target="scanned-diary">mar 04 2022</i> <br>
         </div>
         <div id="comedown" style = "margin-top: 60px;">
           <u class="link" data-target="scanned-comedown">comedown</u> (20 pages) <br> <br>
@@ -271,7 +271,7 @@
   </div>
 </div>
 
-<div class="window" id="art" style="display:block; top: 30%; left: 50%; background-color: white; width: 180px; height: 380px;">
+<div class="window" id="art" style="display:block; top: 30%; left: 45%; background-color: white; width: 180px; height: 380px;">
   <div class="title-bar">
     <div class="title-bar-text">art</div>
     <div class="title-bar-controls">
@@ -455,7 +455,7 @@
   </div>
 </div>
 
-<div class="window" id="media" style="display:none; width: 410px; height: 520px;">
+<div class="window" id="media" style="display:block; top: 20%; left: 60%; background-color: white; width: 180px; height: 520px;">
   <div class="title-bar">
     <div class="title-bar-text">media</div>
     <div class="title-bar-controls">
@@ -489,6 +489,70 @@
         </ul>
       </div>
     </div>
+  </div>
+</div>
+
+<div class="window" id="video-diary" style="display:none; width: 600px; ">
+  <div class="title-bar">
+    <div class="title-bar-text">a video diary</div>
+    <div class="title-bar-controls">
+      <button class="close" data-target="video-diary" aria-label="Close"></button>
+    </div>
+  </div>
+  <div class="window-body">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/9hjh6LTkaGM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <div class="status-bar" style="margin-top: 20px;">
+    <p class="status-bar-field">hami trinh</p>
+    <p class="status-bar-field">dec 01 2022</p>
+  </div>
+</div>
+
+<div class="window" id="warm-love" style="display:none; width: 600px; ">
+  <div class="title-bar">
+    <div class="title-bar-text">i've got my love to keep me warn</div>
+    <div class="title-bar-controls">
+      <button class="close" data-target="warm-love" aria-label="Close"></button>
+    </div>
+  </div>
+  <div class="window-body">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/GnEO0JvnIuc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <div class="status-bar" style="margin-top: 20px;">
+    <p class="status-bar-field">hami trinh</p>
+    <p class="status-bar-field">dec 06 2021</p>
+  </div>
+</div>
+
+<div class="window" id="mine-yours" style="display:none; width: 600px; ">
+  <div class="title-bar">
+    <div class="title-bar-text">mine, yours</div>
+    <div class="title-bar-controls">
+      <button class="close" data-target="mine-yours" aria-label="Close"></button>
+    </div>
+  </div>
+  <div class="window-body">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Jf55n_Ecy9Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <div class="status-bar" style="margin-top: 20px;">
+    <p class="status-bar-field">hami trinh</p>
+    <p class="status-bar-field">apr 01 2021</p>
+  </div>
+</div>
+
+<div class="window" id="in-passing" style="display:none; width: 600px; ">
+  <div class="title-bar">
+    <div class="title-bar-text">in passing</div>
+    <div class="title-bar-controls">
+      <button class="close" data-target="in-passing" aria-label="Close"></button>
+    </div>
+  </div>
+  <div class="window-body">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/BmjTwVpbcKo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <div class="status-bar" style="margin-top: 20px;">
+    <p class="status-bar-field">hami trinh</p>
+    <p class="status-bar-field">aug 24 2020</p>
   </div>
 </div>
 
