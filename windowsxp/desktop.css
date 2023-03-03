@@ -215,17 +215,21 @@ a:hover {
   height: 380px;
 }
 
-#medira {
+#media {
   background-color: white; 
   width: 170px; 
   height: 290px;
+}
+
+.tree-view {
+  height: 340px
 }
 
 
 .entries {
   position: absolute;
   width: 60%;
-  max-height: 350px;
+  height: 350px;
   right: 0;
   padding-right: 15px;
   overflow-y: scroll;
@@ -330,6 +334,14 @@ a:hover {
     .icon img {
       width: 100px;
       height: 100px;
+    }
+
+    .tree-view {
+      height: 490px;
+    }
+
+    .entries {
+      height: 500px;
     }
 
     #archive {
