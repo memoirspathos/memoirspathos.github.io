@@ -5,17 +5,19 @@
   <title>metamorphosis</title>
   <link rel="stylesheet" href="https://unpkg.com/xp.css">   
   <link rel="stylesheet" type="text/css" href="windowsxp/desktop.css">
+
+  <script src="acknowledgements.js"></script>
+  <script src="windowsxp/js/clock.js"></script>
+  <script src="windowsxp/js/icons.js"></script>
+  <script src="windowsxp/js/window.js"></script>
   <script src="windowsxp\js\slideshow.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
 </head>
 <body>
 
-<script src="acknowledgements.js"></script>
-
 <div id="clock"></div>
 <img class="fixed-bottom-right" src="windowsxp/clock.png">
-<script src="windowsxp/js/clock.js"></script>
 
 <div class="grid" id="icon-box">
   <div class="icon" data-target="contact">
@@ -203,7 +205,7 @@
           <i>nov 12 2022</i> <br>
           sometimes i feel like a rotten cigarette <br>
         </div>
-        <div id="feb-17-2023">
+        <div class="link" data-target="scanned-metamorphosis" id="feb-17-2023">
           <i>feb 17 2023</i> <br>
           it gets better <br>
         </div>
@@ -258,7 +260,7 @@
     </div>
 </div>
 
-<div class="window" id="music" style="display:block; top: 7%; left: 67.5%; background-color: white; width: 410px; height: 520px; ">
+<div class="window" id="music" style="display:block; top: 7%; left: 67.5%; background-color: black; width: 410px; ">
   <div class="title-bar">
     <div class="title-bar-text">music</div>
     <div class="title-bar-controls">
@@ -462,7 +464,32 @@
     </div>
   </div>
   <div class="window-body">
-
+    <div class="grid" id="art-box">
+      <div class="icon" data-target="video-diary">
+        <ul>
+            <img src="windowsxp/icons/wmp.png ">
+            <span>video diary</span>
+        </ul>
+      </div>
+      <div class="icon" data-target="warm-love">
+        <ul>
+            <img src="windowsxp/icons/wmp.png ">
+            <span>warm love</span>
+        </ul>
+      </div>
+      <div class="icon" data-target="mine-yours">
+        <ul>
+            <img src="windowsxp/icons/wmp.png ">
+            <span>mine, yours</span>
+        </ul>
+      </div>
+      <div class="icon" data-target="in-passing">
+        <ul>
+            <img src="windowsxp/icons/wmp.png ">
+            <span>in passing</span>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -481,9 +508,6 @@
           </pre>
   </div>
 </div>
-
-<script src="windowsxp/js/icons.js"></script>
-<script src="windowsxp/js/window.js"></script>
 
 <footer id="taskbar">
     <span class="start-btn">
