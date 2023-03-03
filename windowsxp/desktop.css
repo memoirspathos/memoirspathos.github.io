@@ -333,8 +333,11 @@ a:hover {
     }
 
     #archive {
-      top: 65%; 
-      left: 20%; 
+      top: 55%; 
+      left: 10%; 
+      font-size: 16px;
+      width: 800px;
+      height: 550px;
     }
     
     #music {
