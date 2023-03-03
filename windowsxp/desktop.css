@@ -296,5 +296,22 @@ a:hover {
       height: 100px;
     }
 
-
+    #archive {
+      top: 15%; 
+      left: 20%; 
+    }
+    
+    #music {
+      top: 7%; 
+      left: 60%; 
+    }
+    
+    #art {
+      top: 30%; 
+      left: 45%; 
+    }
+    
+    #media {
+      top: 35%; left: 40%; 
+    }
 }
