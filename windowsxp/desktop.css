@@ -3,6 +3,7 @@
   margin: 0;
   font-family: 'IBM Plex Sans', sans-serif;
 }
+
 html, body {
   display: flex;
   align-items: center;
@@ -23,8 +24,8 @@ html, body {
 }
 
 
-
 footer#taskbar {
+  z-index: 11;
   position: fixed;
   bottom: 0;
   left: 0;
