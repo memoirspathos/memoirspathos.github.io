@@ -35,7 +35,13 @@ $(document).ready(function(){
   });
   
   startButton.click(function(event) {
-    startMenu.toggleClass('active-menu');
+    if (startMenu.hasClass('active-menu')) {
+      startMenu.removeClass('active-menu');
+      startButton.removeClass('selected');
+    } else {
+      startMenu.addClass('active-menu');
+      startButton.addClass('selected');
+    }
     event.stopPropagation();
   });
   
