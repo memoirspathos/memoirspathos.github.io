@@ -39,7 +39,7 @@ if (isMobile) {
       myDiv.style.display = "block";
       myDiv.style.position = "absolute";
       myDiv.style.top = "30%";
-      myDiv.style.left = "30%";
+      myDiv.style.left = "20%";
       myDiv.style.zIndex = getMaxZIndex() + 1;
     });
   });

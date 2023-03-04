@@ -64,6 +64,12 @@ span.start-btn:active{
   display:block;
 }
 
+#contact {
+  display:none; 
+  width: 410px; 
+  height: 520px;
+}
+
 #archive {
   top: 5%; 
   left: 10%; 
@@ -342,6 +348,12 @@ a:hover {
 
     .entries {
       height: 500px;
+    }
+
+    #contact {
+      display:none; 
+      width: 410px; 
+      height: 600px;
     }
 
     #archive {
