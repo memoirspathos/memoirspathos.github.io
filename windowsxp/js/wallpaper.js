@@ -14,4 +14,4 @@ let currentIndex = 1;
     setInterval(() => {
     document.body.style.backgroundImage = wallpapers[currentIndex];
     currentIndex = (currentIndex + 1) % wallpapers.length;
-}, 200); // change background every 5 seconds (adjust as needed)
+}, 250); // change background every 5 seconds (adjust as needed)

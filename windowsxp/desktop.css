@@ -345,7 +345,7 @@ a:hover {
     }
 
     #archive {
-      top: 55%; 
+      top: 65%; 
       left: 10%; 
       font-size: 16px;
       width: 800px;
@@ -353,19 +353,19 @@ a:hover {
     }
     
     #music {
-      top: 7%; 
+      top: 17%; 
       left: 50%; 
     }
     
     #art {
-      top: 25%; 
+      top: 35%; 
       left: 65%; 
       width: 210px; 
       height: 600px;
     }
     
     #media {
-      top: 15%; 
+      top: 25%; 
       left: 25%; 
       width: 210px; 
       height: 440px;
