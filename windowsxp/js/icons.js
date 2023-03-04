@@ -102,6 +102,9 @@ showButtons.forEach(function(button) {
   button.addEventListener("click", function() {
     var target = button.dataset.target;
     var myDiv = document.getElementById(target);
+
+    myDiv.style.zIndex = getMaxZIndex() + 1;
+
     // Initialize click count for this button if it doesn't exist
     if (!clickCounts[target]) {
       clickCounts[target] = 0;
@@ -125,7 +128,6 @@ showButtons.forEach(function(button) {
       myDiv.style.position = "absolute";
       myDiv.style.top = "10%";
       myDiv.style.left = "50%";
-      myDiv.style.zIndex = getMaxZIndex() + 1;
       // Reset click count after showing the div
       clickCounts[target] = 0;
     }
