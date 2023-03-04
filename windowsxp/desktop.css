@@ -9,7 +9,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 93.5vh;
-  width: 98vw;
+  width: 97vw;
   background: url("../art assets - trinh hami/metamorphosis/1.jpg") no-repeat center/cover;
   overflow: hidden;
   /* Hide scrollbar for IE, Edge and Firefox */
@@ -25,7 +25,7 @@ body {
 
 
 footer#taskbar {
-  z-index: 11;
+  z-index: 10;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -101,7 +101,6 @@ span.start-btn:active{
   bottom: 27px;
   left: 0;
   opacity: 0;
-  pointer-events: none;
 }
 
 .start-menu-win.active-menu {
@@ -123,7 +122,7 @@ span.start-btn:active{
   bottom: 0;
   right: 0;
   font-size: 14px;
-  padding: 0 14px 6px;
+  padding: 0 10px 6px;
   color: white;
 }
 
@@ -131,7 +130,7 @@ span.start-btn:active{
   z-index: 11;
   position: fixed;
   bottom: 0;
-  right: 0;
+  right: -10px;
 }
 
 #icon-box {
@@ -338,6 +337,15 @@ a:hover {
 .slider .dots .dot.active {
   filter: brightness(1.25);
 }
+
+.title-bar-text {
+  pointer-events: none;
+}
+
+.title-bar-controls button:hover {
+  cursor: pointer;
+}
+
 
 @media screen and (max-width: 1300px) {
     .icon {
