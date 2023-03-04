@@ -39,7 +39,11 @@ if (isMobile) {
       myDiv.style.display = "block";
       myDiv.style.position = "absolute";
       myDiv.style.top = "40%";
-      myDiv.style.left = "15%";
+      if (myDiv.id === "archive") {
+        myDiv.style.left = "15%";
+      } else {
+        myDiv.style.left = "35%";
+      }
       myDiv.style.zIndex = getMaxZIndex() + 1;
     });
   });
