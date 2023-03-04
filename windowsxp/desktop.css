@@ -91,7 +91,7 @@ span.start-btn:active{
 #media {
   width: 170px;
   height: 280px;
-  top: 35%; 
+  top: 40%; 
   left: 60%; 
 }
 
@@ -417,5 +417,5 @@ a:hover {
 }
 
 @media screen and (max-height: 600px) {
-
+  
 }

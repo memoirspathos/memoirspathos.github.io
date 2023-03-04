@@ -14,11 +14,9 @@ var observer = new MutationObserver(function(mutations) {
 
         // Check if the window is now hidden
         if (mutation.target.style.display === "none") {
-          console.log(videoPlayer)
           // Pause the video
           videoPlayer.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
           // Reset the video to the beginning
-          console.log(videoPlayer.contentWindow);
           videoPlayer.contentWindow.postMessage('{"event":"command","func":"seekTo","args":[0,true]}', '*');
         }
       }
