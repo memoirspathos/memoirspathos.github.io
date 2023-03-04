@@ -370,6 +370,14 @@ a:hover {
       width: 210px; 
       height: 440px;
     }
+
+    .title-bar{
+      height: 60px;
+    }
+
+    .title-bar-controls button{
+      transform: scale(1.5);
+    }
 }
 
 @media screen and (max-height: 600px) {

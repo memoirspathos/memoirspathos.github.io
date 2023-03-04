@@ -7,6 +7,9 @@ var clickCounts = {};
 var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
 if (isMobile) {
+  // Keep track of the currently open div
+  var openDiv = null;
+
   // Add touchstart event listeners to the "Show" buttons
   showButtons.forEach(function(button) {
     button.addEventListener("touchstart", function(event) {
@@ -15,32 +18,65 @@ if (isMobile) {
       var target = button.dataset.target;
       var myDiv = document.getElementById(target);
 
-      // Show the div if it's not already visible
-      if (myDiv.style.display !== "block") {
-        button.classList.add("selected");
-        myDiv.style.display = "block";
-        myDiv.style.position = "absolute";
-        myDiv.style.top = "10%";
-        myDiv.style.left = "50%";
-        myDiv.style.zIndex = getMaxZIndex() + 1;
+      // Close other myDivs if a new one is opened
+      if (myDiv !== openDiv) {
+        showButtons.forEach(function(otherButton) {
+          var otherTarget = otherButton.dataset.target;
+          var otherDiv = document.getElementById(otherTarget);
+
+          if (otherDiv !== myDiv && otherDiv.style.display === "block") {
+            otherDiv.style.display = "none";
+            otherButton.classList.remove("selected");
+          }
+        });
       }
+
+      // Set the new div to be the currently open one
+      openDiv = myDiv;
+
+      // Show the new div and apply positioning styles
+      button.classList.add("selected");
+      myDiv.style.display = "block";
+      myDiv.style.position = "absolute";
+      myDiv.style.top = "30%";
+      myDiv.style.left = "30%";
+      myDiv.style.zIndex = getMaxZIndex() + 1;
+    });
+  });
+
+  // Add click event listeners to all link elements
+  var linkElements = document.querySelectorAll(".link");
+  linkElements.forEach(function(link) {
+    link.addEventListener("click", function(event) {
+      event.preventDefault(); // prevent the default link click behavior
+
+      var target = link.dataset.target;
+      var myDiv = document.getElementById(target);
+
+      // Close all other myDivs and show the clicked one
+      showButtons.forEach(function(button) {
+        var otherTarget = button.dataset.target;
+        var otherDiv = document.getElementById(otherTarget);
+
+        if (otherDiv !== myDiv && otherDiv.style.display === "block") {
+          otherDiv.style.display = "none";
+          button.classList.remove("selected");
+        }
+      });
+
+      // Set the new div to be the currently open one
+      openDiv = myDiv;
+
+      // Show the new div and apply positioning styles
+      myDiv.style.display = "block";
+      myDiv.style.position = "absolute";
+      myDiv.style.top = "30%";
+      myDiv.style.left = "30%";
+      myDiv.style.zIndex = getMaxZIndex() + 1;
     });
   });
 }
 
-// Helper function to get the highest z-index of all visible "window" elements
-function getMaxZIndex() {
-  var maxZIndex = 0;
-  myDivs.forEach(function(div) {
-    if (div.style.display === "block") {
-      var zIndex = parseInt(div.style.zIndex);
-      if (zIndex > maxZIndex) {
-        maxZIndex = zIndex;
-      }
-    }
-  });
-  return maxZIndex;
-}
 
 
 var linkElements = document.querySelectorAll(".link");
@@ -114,3 +150,16 @@ document.addEventListener("click", function(event) {
   });
 });
 
+// Helper function to get the highest z-index of all visible "window" elements
+function getMaxZIndex() {
+  var maxZIndex = 0;
+  myDivs.forEach(function(div) {
+    if (div.style.display === "block") {
+      var zIndex = parseInt(div.style.zIndex);
+      if (zIndex > maxZIndex) {
+        maxZIndex = zIndex;
+      }
+    }
+  });
+  return maxZIndex;
+}
