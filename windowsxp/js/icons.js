@@ -38,7 +38,7 @@ if (isMobile) {
       button.classList.add("selected");
       myDiv.style.display = "block";
       myDiv.style.position = "absolute";
-      myDiv.style.top = "30%";
+      myDiv.style.top = "40%";
       myDiv.style.left = "15%";
       myDiv.style.zIndex = getMaxZIndex() + 1;
     });
