@@ -5,7 +5,8 @@ const wallpapers = [
     "url('art assets - trinh hami/metamorphosis/4.jpg')",
     "url('art assets - trinh hami/metamorphosis/5.jpg')",
     "url('art assets - trinh hami/metamorphosis/6.jpg')",
-    "url('art assets - trinh hami/metamorphosis/7.jpg')"
+    "url('art assets - trinh hami/metamorphosis/7.jpg')",
+    "url('redstone.png')"
     // add more images as needed
   ];
 
