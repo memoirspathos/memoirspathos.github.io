@@ -351,7 +351,7 @@ a:hover {
     }
 
     #contact {
-      display:none; 
+      display: none; 
       width: 410px; 
       height: 600px;
     }
@@ -365,11 +365,13 @@ a:hover {
     }
     
     #music {
+      display: none; 
       top: 17%; 
       left: 50%; 
     }
     
     #art {
+      display: none; 
       top: 35%; 
       left: 65%; 
       width: 210px; 
@@ -377,6 +379,7 @@ a:hover {
     }
     
     #media {
+      display: none; 
       top: 25%; 
       left: 25%; 
       width: 210px; 
