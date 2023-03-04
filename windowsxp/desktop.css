@@ -371,8 +371,18 @@ a:hover {
       height: 440px;
     }
 
+    #media .icon:first-child, #art .icon:first-child{
+      margin-top: 20px;
+    }
+
+    .video-diary, .warm-love{
+      height: 435px;
+    }
+
     .title-bar{
       height: 60px;
+      padding-left: 20px;
+      padding-right: 20px;
     }
 
     .title-bar-controls button{
