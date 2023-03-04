@@ -38,7 +38,7 @@ if (isMobile) {
       button.classList.add("selected");
       myDiv.style.display = "block";
       myDiv.style.position = "absolute";
-      myDiv.style.top = "40%";
+      myDiv.style.top = "25%";
       if (myDiv.id === "archive") {
         myDiv.style.left = "15%";
       } else {
