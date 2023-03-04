@@ -40,7 +40,7 @@ if (isMobile) {
       myDiv.style.position = "absolute";
       myDiv.style.top = "25%";
       if (myDiv.id === "archive") {
-        myDiv.style.left = "15%";
+        myDiv.style.left = "20%";
       } else {
         myDiv.style.left = "35%";
       }
