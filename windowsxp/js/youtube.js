@@ -8,16 +8,12 @@ var observer = new MutationObserver(function(mutations) {
         // Get the video player iframe inside the window   
         var videoPlayer = mutation.target.querySelector("iframe");
 
-        if (mutation.target.style.display === "block"){
-            videoPlayer.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
-        }
-
         // Check if the window is now hidden
         if (mutation.target.style.display === "none") {
-          // Pause the video
-          videoPlayer.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
           // Reset the video to the beginning
           videoPlayer.contentWindow.postMessage('{"event":"command","func":"seekTo","args":[0,true]}', '*');
+          // Pause the video
+          videoPlayer.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
         }
       }
     });
