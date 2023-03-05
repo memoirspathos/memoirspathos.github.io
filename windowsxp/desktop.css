@@ -101,10 +101,12 @@ span.start-btn:active{
   bottom: 27px;
   left: 0;
   opacity: 0;
+  pointer-events: none;
 }
 
 .start-menu-win.active-menu {
   opacity: 1;
+  pointer-events: all;
 }
 
 .field-row {

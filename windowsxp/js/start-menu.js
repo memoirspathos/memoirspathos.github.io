@@ -48,8 +48,6 @@ $(document).ready(function(){
   $(document).click(function(event) {
     var isStartMenu = $(event.target).closest('.start-menu-win').is(startMenu);
     var isStartButton = $(event.target).is(startButton);
-
-
     
     if (!isStartMenu && !isStartButton) {
       startMenu.removeClass('active-menu');
