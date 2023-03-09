@@ -1,17 +1,1 @@
-
-    function updateTime() {
-      var now = new Date();
-      var hours = now.getHours();
-      var minutes = now.getMinutes();
-      var ampm = hours >= 12 ? 'PM' : 'AM';
-      
-      hours = hours % 12;
-      hours = hours ? hours : 12;
-      minutes = minutes < 10 ? '0' + minutes : minutes;
-      
-      var timeString = hours + ':' + minutes + ' ' + ampm;
-      
-      document.getElementById('clock').innerHTML = timeString;
-    }
-    
-    setInterval(updateTime, 1000);
+function updateTime(){var e=new Date,t=e.getHours(),n=e.getMinutes(),i=t>=12?"PM":"AM";t%=12;var u=(t=t||12)+":"+(n=n<10?"0"+n:n)+" "+i;document.getElementById("clock").innerHTML=u}setInterval(updateTime,1e3);
